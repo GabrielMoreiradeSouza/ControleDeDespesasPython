@@ -9,23 +9,25 @@ st.set_page_config(page_title="Controle de Despesas Pessoais", layout="wide")
 st.title("Controle de Despesas Pessoais")
 
 st.header("Adicionar Transação")
-with st.form("formulario_transacao"):
-    tipo = st.selectbox("Tipo", ["crédito", "débito"])
-    valor = st.number_input("Valor", min_value=0.01, step=0.01)
-    categoria = st.selectbox("Categoria", ["Alimentação", "Moradia", "Transporte", "Lazer", "Outros"])
-    data = st.date_input("Data", value=datetime.now())
-    enviar = st.form_submit_button("Adicionar")
-    if enviar:
-        response = requests.post("http://localhost:5000/transacoes", json={
-            "tipo": tipo,
-            "valor": valor,
-            "categoria": categoria,
-            "data": str(data)
-        })
-        if response.status_code == 201:
-            st.success("Transação adicionada com sucesso!")
-        else:
-            st.error("Erro ao adicionar transação.")
+tipo = st.selectbox("Tipo", ["crédito", "débito"])
+valor = st.number_input("Valor", min_value=0.01, step=0.01)
+categoria = st.selectbox("Categoria", ["Alimentação", "Moradia", "Transporte", "Lazer", "Outros"])
+if categoria == "Outros":
+    categoria_personalizada = st.text_input("Especifique a Categoria")
+else:
+    categoria_personalizada = categoria
+data = st.date_input("Data", value=datetime.now())
+if st.button("Adicionar"):
+    response = requests.post("http://localhost:5000/transacoes", json={
+        "tipo": tipo,
+        "valor": valor,
+        "categoria": categoria_personalizada,
+        "data": str(data)
+    })
+    if response.status_code == 201:
+        st.success("Transação adicionada com sucesso!")
+    else:
+        st.error("Erro ao adicionar transação.")
 
 st.header("Transações")
 response = requests.get("http://localhost:5000/transacoes")
