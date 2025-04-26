@@ -1,0 +1,15 @@
+
+# Criação do ambiente e instalação
+python -m venv venv
+source venv/bin/activate   # ou venv\Scripts\activate no Windows
+pip install -r requirements.txt
+
+# Executar o backend
+cd backend
+python aplicativo.py
+
+# Executar o frontend
+cd ../frontend
+streamlit run aplicativo.py
+
+# Acessar via navegador em http://localhost:8501

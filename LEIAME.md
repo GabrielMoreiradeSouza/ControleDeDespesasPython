@@ -1,0 +1,1 @@
+Este projeto é um sistema de controle de despesas pessoais usando Flask (backend), Streamlit (frontend) e SQLite.
