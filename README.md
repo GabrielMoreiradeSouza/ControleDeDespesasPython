@@ -4,7 +4,7 @@
   <tr>
     <td align="center">
       <a href="https://github.com/GabrielMoreiradeSouza">
-        <img src="https://github.com/account" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/120267591?&v=4" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
         <sub>
           <b>Gabriel Moreira</b>
         </sub>
