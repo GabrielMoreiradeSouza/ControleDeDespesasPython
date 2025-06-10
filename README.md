@@ -1,3 +1,41 @@
+# 💸 Controle de Despesas Pessoais
+
+Este projeto tem como objetivo oferecer uma **plataforma simples, intuitiva e visual** para **gerenciar finanças pessoais**, ajudando o usuário a **registrar, visualizar e analisar** suas movimentações financeiras de forma prática.
+
+---
+
+## 🧠 Proposta
+
+Muitas pessoas têm dificuldades em acompanhar seus gastos do dia a dia. Este sistema foi desenvolvido para resolver isso de maneira leve e interativa. Ele permite:
+
+- Registrar entradas e saídas financeiras com categorização.
+- Visualizar o histórico de transações.
+- Acompanhar a **evolução mensal** dos gastos e rendimentos.
+- Observar a **distribuição das despesas por categoria**.
+- Anexar imagens de comprovantes, como notas fiscais ou recibos.
+
+---
+
+## 📷 Demonstração da Interface (Streamlit)
+
+![interface_demo](exemplo-interface.png) <!-- você pode adicionar um print futuramente -->
+
+---
+
+## ⚙️ Tecnologias Utilizadas
+
+- **Frontend**: [Streamlit](https://streamlit.io/) – construção rápida de interfaces em Python.
+- **Backend**: [Flask](https://flask.palletsprojects.com/) – API REST simples para comunicação entre o app e o banco.
+- **Banco de Dados**: SQLite – leve, ideal para aplicações locais e pessoais.
+- **Visualização de Dados**: Plotly Express – gráficos dinâmicos e interativos.
+- **Manipulação de Dados**: Pandas – para tratamento e exibição de dados.
+
+---
+
+## 🗃️ Estrutura do Projeto
+
+
+
 ## 🤝 Collaborators
 
 <table>
